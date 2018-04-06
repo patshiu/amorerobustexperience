@@ -1,4 +1,5 @@
 var arrayOfDots = [];
+var touched = false;
 function setup() {
 createCanvas(400, 3000);
 textFont('Arial');
@@ -9,11 +10,19 @@ background(255);
 
 function draw() {
  background(255);
+  if(!touched){
+    push();
+    textSize(80);
+    textAlign(CENTER);
+    text("BLOCKEDT", 0.5*width, 60);
+    pop();
+  }
  // text(frameRate(), 10,10);
  fadeDots();
 }
 
 function touchStarted() {
+  if(!touched){ touched = true};
  makeDot();
 }
 
