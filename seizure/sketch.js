@@ -6,7 +6,7 @@ background(255);
 
 function draw() {
  background(255);
- text(frameRate(), 10,10);
+ // text(frameRate(), 10,10);
  fadeDots();
 }
 
@@ -27,7 +27,8 @@ function fadeDots() {
  for(i = arrayOfDots.length-1; i > 0; i--){
    if (arrayOfDots[i].opacity > 0){
      arrayOfDots[i].opacity = arrayOfDots[i].opacity - 25;
-     fill(0, arrayOfDots[i].opacity);
+     var c = color(random(0,255), random(0,255), random(0,255))
+     fill(c, arrayOfDots[i].opacity);
      noStroke();
      ellipse(arrayOfDots[i].oX, arrayOfDots[i].oY, 120, 120);
    } else {
