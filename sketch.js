@@ -1,12 +1,12 @@
 var arrayOfDots = [];
 function setup() {
-createCanvas(400, 10*windowHeight);
+createCanvas(400, 3000);
 background(0);
 }
 
 function draw() {
  background(0);
- text(frameRate, 10,10);
+ text(frameRate(), 10,10);
  fadeDots();
 }
 
