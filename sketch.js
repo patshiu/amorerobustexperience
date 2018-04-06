@@ -26,7 +26,7 @@ function makeDot() {
 function fadeDots() {
  for(i = arrayOfDots.length-1; i > 0; i--){
    if (arrayOfDots[i].opacity > 0){
-     arrayOfDots[i].opacity = arrayOfDots[i].opacity - 5;
+     arrayOfDots[i].opacity = arrayOfDots[i].opacity - 25;
      fill(255, arrayOfDots[i].opacity);
      noStroke();
      ellipse(arrayOfDots[i].oX, arrayOfDots[i].oY, 60, 60);
